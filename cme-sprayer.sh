@@ -4,7 +4,18 @@
 # Recursive CME spraying: per user each password.
 # Creates log file.
 #
-# usage: ./ad-spray.sh <passwd file> <user file> <IP of DC> <interval to rest in seconds>
+# usage: ./cme-sprayer.sh <passwd file> <user file> <IP of DC> <interval to rest in seconds>
+printf "\n\e[93m ░█▀▀█ ░█▀▄▀█ ░█▀▀▀ ── ░█▀▀▀█ ░█▀▀█ ░█▀▀█ ─█▀▀█ ░█──░█ ░█▀▀▀ ░█▀▀█ \n"
+printf " ░█─── ░█░█░█ ░█▀▀▀ ▀▀ ─▀▀▀▄▄ ░█▄▄█ ░█▄▄▀ ░█▄▄█ ░█▄▄▄█ ░█▀▀▀ ░█▄▄▀\n"
+printf " ░█▄▄█ ░█──░█ ░█▄▄▄ ── ░█▄▄▄█ ░█─── ░█─░█ ░█─░█ ──░█── ░█▄▄▄ ░█─░█\e[39m\n\n"
+function usage {
+  printf "[!] Usage: \e[93m./cme-sprayer.sh\e[39m (passwd file) (user file) (IP of DC) (interval to rest in seconds)\n\n"
+  exit 1
+}
+if [ "$#" -ne 4 ]
+  then
+    usage
+fi
 dc_ip=$3
 passwd_file=$1
 user_file=$2
