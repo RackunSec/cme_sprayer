@@ -7,6 +7,6 @@ Wrapper for recursive CrackMapExec spraying with intervals. Requires [CrackMapEx
 ```bash
 git clone https://github.com/RackunSec/cme_sprayer.git
 cd cme_sprayer
-chmod +x cme_sprayer.sh
-./cme_sprayer.sh (passwd file) (user list) (DC IP) (interval in seconds)
+chmod +x cme-sprayer.sh
+./cme-sprayer.sh (passwd file) (user list) (DC IP) (interval in seconds)
 ```
