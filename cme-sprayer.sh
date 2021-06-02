@@ -9,7 +9,7 @@ printf "\n\e[93m ░█▀▀█ ░█▀▄▀█ ░█▀▀▀ ── ░�
 printf " ░█─── ░█░█░█ ░█▀▀▀ ▀▀ ─▀▀▀▄▄ ░█▄▄█ ░█▄▄▀ ░█▄▄█ ░█▄▄▄█ ░█▀▀▀ ░█▄▄▀\n"
 printf " ░█▄▄█ ░█──░█ ░█▄▄▄ ── ░█▄▄▄█ ░█─── ░█─░█ ░█─░█ ──░█── ░█▄▄▄ ░█─░█\e[39m\n\n"
 function usage {
-  printf "[!] Usage: \e[93m./cme-sprayer.sh\e[39m (passwd file) (user file) (IP of DC) (interval to rest in seconds)\n\n"
+  printf "[!] Usage: \e[1m\e[93m./cme-sprayer.sh\e[39m (passwd file) (user file) (IP of DC) (interval to rest in seconds)\n\n"
   exit 1
 }
 if [ "$#" -ne 4 ]
@@ -20,13 +20,12 @@ dc_ip=$3
 passwd_file=$1
 user_file=$2
 interval=$4
-printf "[i] Spraying DC: $dc_ip\n"
-printf "[i] Password list: $passwd_file\n"
-printf "[i] Username list: $user_file\n"
-printf "[i] Rest interval: $interval seconds\n"
-logfile="ad-spray-${dc_ip}_int_${interval}_$(date '+%s').txt"
-printf "[i] Log file: ${logfile}\n"
-printf "====================================================\n"
+printf "[i] Spraying DC: \e[1m\e[93m$dc_ip\e[39m\n"
+printf "[i] Password list:\e[1m \e[93m$passwd_file\e[39m\n"
+printf "[i] Username list: \e[1m\e[93m$user_file\e[39m\n"
+printf "[i] Rest interval:\e[1m \e[93m$interval\e[39m seconds\n"
+logfile="cme-sprayer-${dc_ip}_int_${interval}_$(date '+%s').txt"
+printf "[i] Log file: \e[1m\e[93m${logfile}\e[39m\n\n"
 printf "[?] Continue? (CTRL+C to quit at anytime) (y/n)? "
 read ans
 trap ctrl_c INT
