@@ -1,7 +1,7 @@
 # cme_sprayer
 Wrapper for recursive CrackMapExec spraying with intervals. Requires [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec).
 
-![CME_Sprayer Screenshot](cme-sprayer-screenshot.png)
+![CME_Sprayer Screenshot](screenshot.png)
 
 ## USAGE
 ```bash
