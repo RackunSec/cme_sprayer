@@ -5,9 +5,10 @@
 # Creates log file.
 #
 # usage: ./cme-sprayer.sh <passwd file> <user file> <IP of DC> <interval to rest in seconds>
-printf "\n\e[93m ░█▀▀█ ░█▀▄▀█ ░█▀▀▀ ── ░█▀▀▀█ ░█▀▀█ ░█▀▀█ ─█▀▀█ ░█──░█ ░█▀▀▀ ░█▀▀█ \n"
-printf " ░█─── ░█░█░█ ░█▀▀▀ ▀▀ ─▀▀▀▄▄ ░█▄▄█ ░█▄▄▀ ░█▄▄█ ░█▄▄▄█ ░█▀▀▀ ░█▄▄▀\n"
-printf " ░█▄▄█ ░█──░█ ░█▄▄▄ ── ░█▄▄▄█ ░█─── ░█─░█ ░█─░█ ──░█── ░█▄▄▄ ░█─░█\e[39m\n\n"
+printf "   *    .                *                         .                 .   *\n\e[93m"
+printf "  ░█▀▀█ ░█▀▄▀█ ░█▀▀▀ ── ░█▀▀▀█ ░█▀▀█ ░█▀▀█ ─█▀▀█ ░█──░█ ░█▀▀▀ ░█▀▀█ \e[39m.\n"
+printf "  ░█─── ░█░█░█ ░█▀▀▀ ▀▀ ─▀▀▀▄▄ ░█▄▄█ ░█▄▄▀ ░█▄▄█ ░█▄▄▄█ ░█▀▀▀ ░█▄▄▀   .  \e[39m \n"
+printf ".\e[93m ░█▄▄█ ░█──░█ ░█▄▄▄ ── ░█▄▄▄█ ░█─── ░█─░█ ░█─░█ ──░█── ░█▄▄▄ ░█─░█ \e[39m*\n\n"
 function usage {
   printf "[!] Usage: \e[1m\e[93m./cme-sprayer.sh\e[39m (passwd file) (user file) (IP of DC) (interval to rest in seconds)\n\n"
   exit 1
